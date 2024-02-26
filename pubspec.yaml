@@ -38,6 +38,7 @@ dependencies:
   google_fonts: ^6.1.0
   carousel_slider: ^4.2.1
   rolling_bottom_bar: ^0.2.2
+  animate_do: ^3.3.3
 
 dev_dependencies:
   flutter_test:
