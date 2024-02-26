@@ -33,7 +33,7 @@ class NavigationBarApp extends StatelessWidget {
         ),
         extendBody: true,
         bottomNavigationBar: RollingBottomBar(
-          color: Color.fromARGB(210, 195, 230, 119),
+          color: Color.fromARGB(160, 195, 230, 119),
           controller: _pageControlller,
           flat: true,
           useActiveColorByDefault: false,
