@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class BuyMycar extends StatelessWidget {
@@ -24,7 +25,12 @@ class BuyMycar extends StatelessWidget {
         leadingWidth: 100,
         title: const Text('สินค้าที่เลือก'),
       ),
-      body: const Column(),
+      body: const Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(padding: EdgeInsets.all(20)),
+        ],
+      ),
     );
   }
 }

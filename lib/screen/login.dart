@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '../component/my_bottom.dart';
 import 'signup_screen.dart';
 
 class LoginApp extends StatefulWidget {
-  LoginApp({super.key});
+  const LoginApp({super.key});
 
   @override
   State<LoginApp> createState() => _LoginAppState();
