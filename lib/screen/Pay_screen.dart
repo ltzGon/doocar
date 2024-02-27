@@ -9,6 +9,7 @@ class Pay_in_installments extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black12,
         leading: Image.asset(
+          color: const Color.fromARGB(179, 255, 0, 0),
           "assets/images/3.png",
           width: 200,
           height: 200,

@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import '../widget/Contact.dart';
-import '../widget/Profile.dart';
-import '../widget/mySetting.dart';
-import '../widget/myinformation.dart';
 
 class SettingProfile extends StatelessWidget {
   const SettingProfile({super.key});
@@ -14,24 +10,144 @@ class SettingProfile extends StatelessWidget {
         backgroundColor: Colors.black12,
         leading: Image.asset(
           "assets/images/3.png",
+          color: const Color.fromARGB(179, 255, 0, 0),
           width: 200,
           height: 100,
         ),
         leadingWidth: 100,
         title: const Text('ตั้งค่าบัญชีผู้ใช้'),
       ),
-      body: GridView.extent(
-        padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
-        maxCrossAxisExtent: 200, //ความใหญ่
-        mainAxisSpacing: 30, //ระยะซ้ายขวา่
-        crossAxisSpacing: 30, //ระยะบนล่าง
-        scrollDirection: Axis.vertical,
-        children: const [
-          Profile(),
-          Setting(),
-          Information(),
-          contact(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 120, vertical: 30),
+              child: const Text(
+                ' My Profile',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w900,
+                  fontFamily: AutofillHints.birthday,
+                ),
+              ),
+            ),
+            Container(
+              child: CircleAvatar(
+                backgroundColor: Colors.white70,
+                child: Image.asset('assets/images/3.png'),
+                radius: 80,
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 20),
+              child: Text(
+                'Surachai Subnalsing',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w900,
+                  fontFamily: AutofillHints.birthday,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    fixedSize: const Size(350, 60),
+                    shape: const StadiumBorder(),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                  ),
+                  child: const Text(
+                    "Edit Profile",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                      color: Color.fromARGB(179, 0, 0, 0),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    fixedSize: const Size(350, 60),
+                    shape: const StadiumBorder(),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                  ),
+                  child: const Text(
+                    "Edit Information",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                      color: Color.fromARGB(179, 0, 0, 0),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    fixedSize: const Size(350, 60),
+                    shape: const StadiumBorder(),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                  ),
+                  child: const Text(
+                    "Setting",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                      color: Color.fromARGB(179, 0, 0, 0),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    fixedSize: const Size(350, 60),
+                    shape: const StadiumBorder(),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                  ),
+                  child: const Text(
+                    "Logout",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                      color: Color.fromARGB(255, 250, 0, 0),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

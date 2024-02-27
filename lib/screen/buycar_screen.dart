@@ -18,6 +18,7 @@ class BuyMycar extends StatelessWidget {
           ),
         ),
         leading: Image.asset(
+          color: const Color.fromARGB(179, 255, 0, 0),
           "assets/images/3.png",
           width: 200,
           height: 200,
