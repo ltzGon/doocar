@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'login.dart';
+
 class SettingProfile extends StatelessWidget {
   const SettingProfile({super.key});
 
@@ -129,7 +131,14 @@ class SettingProfile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginApp(),
+                      ),
+                    );
+                  },
                   style: OutlinedButton.styleFrom(
                     fixedSize: const Size(350, 60),
                     shape: const StadiumBorder(),
