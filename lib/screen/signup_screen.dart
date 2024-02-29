@@ -148,7 +148,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         width: 350,
                         height: 60,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            signup();
+                          },
                           style: ElevatedButton.styleFrom(
                             shape: const StadiumBorder(),
                             padding: const EdgeInsets.symmetric(vertical: 16),
