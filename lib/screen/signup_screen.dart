@@ -15,23 +15,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController name = TextEditingController();
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
-  Future signup() async {
-    String url = "http://127.0.0.1/API/register.php";
-    //อ่าน//
-    //อันเเรกคือรันบนเว็บ//
-
-    final response = await http.post(Uri.parse(url), body: {
-      'name': name.text,
-      'email': email.text,
-      'password': password.text,
-    });
-    var data = json.decode(response.body);
-    if (data == "Error") {
-      Navigator.pushNamed(context, 'signup_screen');
-    } else {
-      Navigator.pushNamed(context, 'login');
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -148,9 +131,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         width: 350,
                         height: 60,
                         child: ElevatedButton(
-                          onPressed: () {
-                            signup();
-                          },
+                          onPressed: () {},
                           style: ElevatedButton.styleFrom(
                             shape: const StadiumBorder(),
                             padding: const EdgeInsets.symmetric(vertical: 16),
