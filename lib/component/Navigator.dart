@@ -35,7 +35,7 @@ class _NavigatorbarState extends State<Navigatorbar> {
       ),
       extendBody: true,
       bottomNavigationBar: RollingBottomBar(
-        color: Color.fromARGB(255, 226, 206, 25),
+        color: Color.fromARGB(140, 25, 226, 136),
         controller: _pageControlller,
         flat: true,
         useActiveColorByDefault: false,
@@ -49,11 +49,8 @@ class _NavigatorbarState extends State<Navigatorbar> {
           ),
           RollingBottomBarItem(Icons.attach_money,
               label: 'Pay', activeColor: Colors.green),
-          RollingBottomBarItem(
-            Icons.settings,
-            label: 'Setting',
-            activeColor: Color.fromARGB(255, 10, 10, 10),
-          ),
+          RollingBottomBarItem(Icons.attach_money,
+              label: 'setting', activeColor: Colors.green),
         ],
         enableIconRotation: true,
         onTap: (index) {

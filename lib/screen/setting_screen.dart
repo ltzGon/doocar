@@ -37,8 +37,12 @@ class SettingProfile extends StatelessWidget {
             Container(
               child: CircleAvatar(
                 backgroundColor: Colors.white70,
-                child: Image.asset('assets/images/3.png'),
-                radius: 80,
+                child: Image.asset(
+                  'assets/images/3.png',
+                  width: 30,
+                  height: 10,
+                ),
+                radius: 30,
               ),
             ),
             const Padding(
@@ -67,30 +71,6 @@ class SettingProfile extends StatelessWidget {
                   ),
                   child: const Text(
                     "Edit Profile",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w900,
-                      color: Color.fromARGB(179, 0, 0, 0),
-                    ),
-                  ),
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                OutlinedButton(
-                  onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                    fixedSize: const Size(350, 60),
-                    shape: const StadiumBorder(),
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                  ),
-                  child: const Text(
-                    "Edit Information",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w900,
