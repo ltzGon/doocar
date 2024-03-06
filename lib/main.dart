@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
 import 'component/Navigator.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const NavigationBarApp());
 }
 
@@ -15,7 +15,7 @@ class NavigationBarApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.fallback(),
-      home: const Navigatorbar(),
+      home: Navigatorbar(),
     );
   }
 }
