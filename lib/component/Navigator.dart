@@ -1,3 +1,4 @@
+import 'package:doocar/screen/hidden_drawer.dart';
 import 'package:rolling_bottom_bar/rolling_bottom_bar.dart';
 import 'package:rolling_bottom_bar/rolling_bottom_bar_item.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,7 @@ class _NavigatorbarState extends State<Navigatorbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavBar(),
       body: PageView(
         controller: _pageControlller,
         children: const <Widget>[
@@ -35,7 +37,7 @@ class _NavigatorbarState extends State<Navigatorbar> {
       ),
       extendBody: true,
       bottomNavigationBar: RollingBottomBar(
-        color: Color.fromARGB(140, 25, 226, 136),
+        color: Color.fromARGB(139, 36, 36, 36),
         controller: _pageControlller,
         flat: true,
         useActiveColorByDefault: false,

@@ -4,17 +4,18 @@ import 'component/Navigator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const NavigationBarApp());
+  runApp(const Myapp());
 }
 
-class NavigationBarApp extends StatelessWidget {
-  const NavigationBarApp({super.key});
+class Myapp extends StatelessWidget {
+  const Myapp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.fallback(),
+      themeAnimationCurve: Curves.bounceIn,
+      theme: ThemeData.light(),
       home: Navigatorbar(),
     );
   }
