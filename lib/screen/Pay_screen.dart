@@ -10,7 +10,6 @@ class Pay_in_installments extends StatelessWidget {
     return Scaffold(
       drawer: const NavBar(),
       appBar: AppBar(
-        backgroundColor: Colors.black12,
         leadingWidth: 100,
         title: const Text('คำนวณค่างวดผ่อน'),
       ),

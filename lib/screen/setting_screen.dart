@@ -9,7 +9,6 @@ class SettingProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black12,
         leading: Image.asset(
           "assets/images/3.png",
           color: const Color.fromARGB(179, 255, 0, 0),

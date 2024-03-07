@@ -10,7 +10,6 @@ class BuyMycar extends StatelessWidget {
     return Scaffold(
       drawer: NavBar(),
       appBar: AppBar(
-        backgroundColor: Colors.black12,
         leadingWidth: 100,
         title: const Text('สินค้าที่เลือก'),
       ),

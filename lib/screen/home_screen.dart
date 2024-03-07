@@ -10,7 +10,6 @@ class Homescreen extends StatelessWidget {
     return Scaffold(
       drawer: NavBar(),
       appBar: AppBar(
-        backgroundColor: Colors.black12,
         leadingWidth: 100,
         title: const Text('ร้านค้า'),
         actions: <Widget>[
