@@ -1,10 +1,10 @@
-import 'package:doocar/screen/hidden_drawer.dart';
+import 'package:doocar/screen/home_screen.dart';
 import 'package:rolling_bottom_bar/rolling_bottom_bar.dart';
 import 'package:rolling_bottom_bar/rolling_bottom_bar_item.dart';
 import 'package:flutter/material.dart';
 import '../screen/Pay_screen.dart';
 import '../screen/buycar_screen.dart';
-import '../screen/home_screen.dart';
+import '../screen/hidden_drawer.dart';
 import '../screen/setting_screen.dart';
 
 class Navigatorbar extends StatefulWidget {

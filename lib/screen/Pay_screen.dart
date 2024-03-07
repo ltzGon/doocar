@@ -8,7 +8,7 @@ class Pay_in_installments extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const NavBar(),
+      drawer: NavBar(),
       appBar: AppBar(
         leadingWidth: 100,
         title: const Text('คำนวณค่างวดผ่อน'),

@@ -1,13 +1,35 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
+  Future<void> Setting() async {
+    return print("long pass");
+  }
+
+  Future<void> EditProfile() async {
+    return print("EditProfile");
+  }
+
+  Future<void> EditPicture() async {
+    return print("EditPicture");
+  }
+
+  Future<void> Login_logout() async {
+    return print("Login_logout");
+  }
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(25.0),
+      ),
       child: ListView(
+        padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
             accountName: const Text("Surachai"),
@@ -18,49 +40,40 @@ class NavBar extends StatelessWidget {
               ),
             ),
             decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 0, 0, 0),
+              color: Color.fromARGB(255, 255, 255, 255),
               image: DecorationImage(
-                  image: AssetImage("assets/images/2.png"),
-                  fit: BoxFit.fitWidth),
+                image: AssetImage("assets/images/2.png"),
+                fit: BoxFit.fitWidth,
+              ),
             ),
           ),
-          const Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    ListTile(
-                      leading: Icon(Icons.person),
-                      title: Text("Edit Picture"),
-                    ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.edit),
-                      title: Text("Edit Profile"),
-                    ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    ListTile(
-                      shape: Border(bottom: BorderSide.none),
-                      leading: Icon(Icons.settings_applications),
-                      title: Text("setting"),
-                    ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.logout_sharp),
-                      title: Text("Logout"),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+          ElevatedButton(
+            onPressed: () {},
+            child: const ListTile(
+              leading: Icon(Icons.file_upload),
+              title: Text("upload"),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const ListTile(
+              leading: Icon(Icons.file_upload),
+              title: Text("upload"),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const ListTile(
+              leading: Icon(Icons.file_upload),
+              title: Text("upload"),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const ListTile(
+              leading: Icon(Icons.file_upload),
+              title: Text("upload"),
+            ),
           ),
         ],
       ),
