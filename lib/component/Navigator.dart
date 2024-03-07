@@ -51,7 +51,7 @@ class _NavigatorbarState extends State<Navigatorbar> {
           ),
           RollingBottomBarItem(Icons.attach_money,
               label: 'Pay', activeColor: Colors.green),
-          RollingBottomBarItem(Icons.attach_money,
+          RollingBottomBarItem(Icons.settings,
               label: 'setting', activeColor: Colors.green),
         ],
         enableIconRotation: true,

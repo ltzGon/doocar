@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:doocar/widget/mycar.dart';
 import 'hidden_drawer.dart';
 
 class BuyMycar extends StatelessWidget {
@@ -13,12 +13,7 @@ class BuyMycar extends StatelessWidget {
         leadingWidth: 100,
         title: const Text('สินค้าที่เลือก'),
       ),
-      body: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(padding: EdgeInsets.all(20)),
-        ],
-      ),
+      body: Mycar(),
     );
   }
 }
