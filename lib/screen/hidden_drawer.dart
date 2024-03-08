@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
 
-  @override
+  @override //Hola Amigos
   State<NavBar> createState() => _NavBarState();
 }
 
