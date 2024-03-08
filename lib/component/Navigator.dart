@@ -32,7 +32,6 @@ class _NavigatorbarState extends State<Navigatorbar> {
           Homescreen(),
           BuyMycar(),
           Pay_in_installments(),
-          SettingProfile(),
         ],
       ),
       extendBody: true,
@@ -51,8 +50,6 @@ class _NavigatorbarState extends State<Navigatorbar> {
           ),
           RollingBottomBarItem(Icons.attach_money,
               label: 'Pay', activeColor: Colors.green),
-          RollingBottomBarItem(Icons.settings,
-              label: 'setting', activeColor: Colors.green),
         ],
         enableIconRotation: true,
         onTap: (index) {

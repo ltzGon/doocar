@@ -1,7 +1,7 @@
 // ignore_for_file: override_on_non_overriding_member, unused_import
 
 import 'dart:convert';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:doocar/component/Navigator.dart';
 import 'package:flutter/material.dart';
 import 'signup_screen.dart';
@@ -35,6 +35,7 @@ class _LoginAppState extends State<LoginApp> {
 
         if ($response["success"] == "true") {
           _showMyDialoglogin("Login success");
+          saveLoginStatus();
         } else {
           print("some issue");
         }
@@ -44,6 +45,11 @@ class _LoginAppState extends State<LoginApp> {
     } else {
       print("Please Fill All fileds");
     }
+  }
+
+  void saveLoginStatus() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setBool('isLoggedIn', true);
   }
 
   void _showMyDialoglogin(String txtMsg) async {
@@ -63,7 +69,9 @@ class _LoginAppState extends State<LoginApp> {
               TextButton(
                 onPressed: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: ((context) => Navigatorbar())),
+                  MaterialPageRoute(
+                    builder: ((context) => Navigatorbar()),
+                  ),
                 ),
                 child: const Text('OK'),
               ),

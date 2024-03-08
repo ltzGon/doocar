@@ -1,8 +1,7 @@
 import 'package:doocar/screen/home_screen.dart';
 import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:doocar/widget/shopping.dart';
+
 export 'package:doocar/widget/shopping.dart';
 
 class ShoppingListviewWidget extends StatefulWidget {
