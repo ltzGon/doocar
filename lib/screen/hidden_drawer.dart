@@ -1,7 +1,5 @@
-import 'package:doocar/screen/login.dart';
-import 'package:doocar/widget/mySetting.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'signup_screen.dart';
@@ -38,8 +36,24 @@ class _NavBarState extends State<NavBar> {
       child: ListView(
         children: [
           UserAccountsDrawerHeader(
-            accountName: const Text("Surachai"),
-            accountEmail: const Text("surachaikai2545@gmail.com"),
+            accountName: const Text(
+              "Surachai",
+              style: TextStyle(
+                fontFamily: 'CustomFont',
+                fontSize: 16,
+                fontWeight: FontWeight
+                    .normal, // This can be FontWeight.bold for the bold version
+              ),
+            ),
+            accountEmail: const Text(
+              "surachaikai2545@gmail.com",
+              style: TextStyle(
+                fontFamily: 'CustomFont',
+                fontSize: 16,
+                fontWeight: FontWeight
+                    .normal, // This can be FontWeight.bold for the bold version
+              ),
+            ),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
                 child: Image.asset("assets/images/bmw.png"),
@@ -65,7 +79,7 @@ class _NavBarState extends State<NavBar> {
                         Edit_Profile();
                       },
                       style: TextButton.styleFrom(
-                        foregroundColor: Color.fromARGB(255, 0, 0, 0),
+                        foregroundColor: const Color.fromARGB(255, 0, 0, 0),
                         backgroundColor: Colors.white, // สีของตัวอักษรภายในปุ่ม
                         elevation: 5, // ความสูงของเงา
                         shape: RoundedRectangleBorder(
@@ -74,10 +88,18 @@ class _NavBarState extends State<NavBar> {
                           ), // การกำหนดรูปร่างของปุ่ม
                         ),
                       ),
-                      icon: Icon(Icons.person_3_outlined),
+                      icon: const Icon(
+                        Icons.person_3_outlined,
+                        color: Color.fromARGB(255, 26, 25, 25),
+                      ),
                       label: const Text(
-                        "\t\t\t\tEdit Profile\t\t\t\t\t\t\t\t",
-                        style: TextStyle(fontSize: 20),
+                        '\t\t\t\t\tEdit Profile\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t',
+                        style: TextStyle(
+                          fontFamily: 'CustomFont',
+                          fontSize: 16,
+                          fontWeight: FontWeight
+                              .normal, // This can be FontWeight.bold for the bold version
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -88,7 +110,7 @@ class _NavBarState extends State<NavBar> {
                         Edit_Picture();
                       },
                       style: TextButton.styleFrom(
-                        foregroundColor: Color.fromARGB(255, 0, 0, 0),
+                        foregroundColor: const Color.fromARGB(255, 0, 0, 0),
                         backgroundColor: Colors.white, // สีของตัวอักษรภายในปุ่ม
                         elevation: 5, // ความสูงของเงา
                         shape: RoundedRectangleBorder(
@@ -96,10 +118,15 @@ class _NavBarState extends State<NavBar> {
                               20), // การกำหนดรูปร่างของปุ่ม
                         ),
                       ),
-                      icon: Icon(Icons.picture_as_pdf),
+                      icon: const Icon(Icons.picture_as_pdf),
                       label: const Text(
-                        "\t\t\t\tEdit Picture\t\t\t\t\t\t\t\t",
-                        style: TextStyle(fontSize: 20),
+                        "\t\t\t\t\tEdit Picture\t\t\t\t\t\t\t\t\t\t\t\t\t",
+                        style: TextStyle(
+                          fontFamily: 'CustomFont',
+                          fontSize: 16,
+                          fontWeight: FontWeight
+                              .normal, // This can be FontWeight.bold for the bold version
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -110,7 +137,7 @@ class _NavBarState extends State<NavBar> {
                         Setting();
                       },
                       style: TextButton.styleFrom(
-                        foregroundColor: Color.fromARGB(255, 0, 0, 0),
+                        foregroundColor: const Color.fromARGB(255, 0, 0, 0),
                         backgroundColor: Colors.white, // สีของตัวอักษรภายในปุ่ม
                         elevation: 5, // ความสูงของเงา
                         shape: RoundedRectangleBorder(
@@ -118,11 +145,19 @@ class _NavBarState extends State<NavBar> {
                               10), // การกำหนดรูปร่างของปุ่ม
                         ),
                       ),
-                      icon: Icon(Icons.settings),
+                      icon: const Icon(Icons.settings),
                       label: const Text(
                         "\t\t\t\tSetting\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t",
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(
+                          fontFamily: 'CustomFont',
+                          fontSize: 16,
+                          fontWeight: FontWeight
+                              .normal, // This can be FontWeight.bold for the bold version
+                        ),
                       ),
+                    ),
+                    const SizedBox(
+                      height: 30,
                     ),
                     TextButton.icon(
                       onPressed: () {
@@ -134,7 +169,7 @@ class _NavBarState extends State<NavBar> {
                         );
                       },
                       style: TextButton.styleFrom(
-                        foregroundColor: Color.fromARGB(255, 0, 0, 0),
+                        foregroundColor: const Color.fromARGB(255, 0, 0, 0),
                         backgroundColor: Colors.white, // สีของตัวอักษรภายในปุ่ม
                         elevation: 5, // ความสูงของเงา
                         shape: RoundedRectangleBorder(
@@ -142,10 +177,15 @@ class _NavBarState extends State<NavBar> {
                               20), // การกำหนดรูปร่างของปุ่ม
                         ),
                       ),
-                      icon: Icon(Icons.login),
+                      icon: const Icon(Icons.login),
                       label: const Text(
-                        "\t\t\t\tLogin\t\t\t\t\t\t\t\t",
-                        style: TextStyle(fontSize: 20),
+                        "\t\t\t\t\tLogin\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t",
+                        style: TextStyle(
+                          fontFamily: 'CustomFont',
+                          fontSize: 16,
+                          fontWeight: FontWeight
+                              .normal, // This can be FontWeight.bold for the bold version
+                        ),
                       ),
                     ),
                     const SizedBox(
