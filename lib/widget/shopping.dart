@@ -158,15 +158,15 @@ class ShoppingListviewWidgetState extends State<ShoppingListviewWidget>
                             ),
                           ),
                           Tab(
-                            text: 'Beachfront',
+                            text: 'Featured',
                             icon: Icon(
-                              Icons.beach_access_rounded,
+                              Icons.star,
                             ),
                           ),
                           Tab(
-                            text: 'Nature',
+                            text: 'Racing',
                             icon: Icon(
-                              Icons.nature_people,
+                              Icons.flag_circle,
                             ),
                           ),
                         ],
