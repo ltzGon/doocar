@@ -1,8 +1,7 @@
+import 'package:doocar/Login_logout.dart';
 import 'package:flutter/material.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
-
-import 'signup_screen.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -12,12 +11,6 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  Future<bool> isLoggedIn() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
-    return isLoggedIn;
-  }
-
   Future Edit_Profile() async {
     return;
   }
@@ -159,38 +152,7 @@ class _NavBarState extends State<NavBar> {
                     const SizedBox(
                       height: 30,
                     ),
-                    TextButton.icon(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const SignUpScreen(),
-                          ),
-                        );
-                      },
-                      style: TextButton.styleFrom(
-                        foregroundColor: const Color.fromARGB(255, 0, 0, 0),
-                        backgroundColor: Colors.white, // สีของตัวอักษรภายในปุ่ม
-                        elevation: 5, // ความสูงของเงา
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                              20), // การกำหนดรูปร่างของปุ่ม
-                        ),
-                      ),
-                      icon: const Icon(Icons.login),
-                      label: const Text(
-                        "\t\t\t\t\tLogin\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t",
-                        style: TextStyle(
-                          fontFamily: 'CustomFont',
-                          fontSize: 16,
-                          fontWeight: FontWeight
-                              .normal, // This can be FontWeight.bold for the bold version
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
+                    const Login_logout_(),
                   ],
                 ),
               ),
