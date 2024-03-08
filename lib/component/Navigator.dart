@@ -28,7 +28,7 @@ class _NavigatorbarState extends State<Navigatorbar> {
       drawer: NavBar(),
       body: PageView(
         controller: _pageControlller,
-        children: const <Widget>[
+        children: <Widget>[
           Homescreen(),
           BuyMycar(),
           Pay_in_installments(),
